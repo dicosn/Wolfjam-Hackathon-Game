@@ -1,28 +1,11 @@
-[gd_scene load_steps=9 format=3 uid="uid://cirdy2tvrl1ng"]
+[gd_scene load_steps=8 format=3 uid="uid://cirdy2tvrl1ng"]
 
 [ext_resource type="Script" path="res://Scripts/Main_Test.cs" id="1_3cprv"]
 [ext_resource type="TileSet" uid="uid://cr8v7t8tse0ng" path="res://new_tile_set.tres" id="1_ffq8e"]
 [ext_resource type="PackedScene" uid="uid://bj8wa1vw6x6ha" path="res://Scenes/Character.tscn" id="3_b8g3r"]
 [ext_resource type="Script" path="res://Scripts/Label2.gd" id="3_noddq"]
 [ext_resource type="Script" path="res://Scenes/Character.cs" id="3_vop3f"]
-
-[sub_resource type="FontVariation" id="FontVariation_o7c1s"]
-variation_embolden = 0.79
-opentype_features = {
-1936928817: 1
-}
-spacing_glyph = -2
-spacing_space = 15
-
-[sub_resource type="LabelSettings" id="LabelSettings_g86og"]
-font = SubResource("FontVariation_o7c1s")
-font_size = 60
-font_color = Color(0.823529, 0.721569, 0.92549, 1)
-outline_size = 40
-outline_color = Color(0.568627, 0.14902, 0, 1)
-shadow_size = 60
-shadow_color = Color(0, 0, 0, 1)
-shadow_offset = Vector2(10, 10)
+[ext_resource type="PackedScene" path="res://dork.tscn" id="6_uecoa"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_8u2tf"]
 font_size = 40
@@ -35,14 +18,6 @@ Character = ExtResource("3_b8g3r")
 script = ExtResource("3_vop3f")
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
-
-[node name="TitleLabel" type="Label" parent="CanvasLayer"]
-offset_left = 10.0
-offset_top = 10.0
-offset_right = 610.0
-offset_bottom = 96.0
-text = "Crungulon's Crucade"
-label_settings = SubResource("LabelSettings_g86og")
 
 [node name="Label" type="Label" parent="CanvasLayer"]
 offset_left = 10.0
@@ -61,3 +36,6 @@ layer_0/tile_data = PackedInt32Array(1638400, 12, 0, 1638401, 12, 0, 1638402, 12
 
 [node name="PlayerStartPosition" type="Marker2D" parent="."]
 position = Vector2(500, 1200)
+
+[node name="CharacterBody2D2" parent="." instance=ExtResource("6_uecoa")]
+position = Vector2(1059, 1514)

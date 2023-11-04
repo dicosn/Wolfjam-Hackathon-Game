@@ -1,4 +1,4 @@
-[gd_scene load_steps=4 format=3 uid="uid://dcrd5jm1aiugm"]
+[gd_scene load_steps=4 format=3 uid="uid://bv12trgci63ta"]
 
 [ext_resource type="Texture2D" uid="uid://b0u6rhf5hc7js" path="res://Assets/Silly Dork/foolishnerd.png" id="1_0jh3r"]
 [ext_resource type="Script" path="res://dork.cs" id="1_krvl4"]
