@@ -1,0 +1,28 @@
+[gd_scene load_steps=4 format=3 uid="uid://dcrd5jm1aiugm"]
+
+[ext_resource type="Texture2D" uid="uid://b0u6rhf5hc7js" path="res://Assets/Silly Dork/foolishnerd.png" id="1_0jh3r"]
+[ext_resource type="Script" path="res://dork.cs" id="1_krvl4"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_dnwgc"]
+radius = 54.037
+
+[node name="CharacterBody2D" type="CharacterBody2D"]
+script = ExtResource("1_krvl4")
+
+[node name="Node2D" type="Node2D" parent="."]
+
+[node name="Sprite" type="Sprite2D" parent="."]
+scale = Vector2(2, 2)
+texture = ExtResource("1_0jh3r")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, 3)
+shape = SubResource("CircleShape2D_dnwgc")
+
+[node name="LeftRaycast" type="RayCast2D" parent="."]
+position = Vector2(-58, 1)
+target_position = Vector2(0, 10)
+
+[node name="RightRaycast" type="RayCast2D" parent="."]
+position = Vector2(53, -2)
+target_position = Vector2(0, 10)
